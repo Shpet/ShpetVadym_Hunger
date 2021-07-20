@@ -17,7 +17,7 @@ const styleFiles = [
     './src/css/booking.less',
     './src/css/specialities.less',
     './src/css/menu.less',
-    './src/css/private_events.less'
+    './src/css/events.less'
 ]
 const jsFiles = [
     './src/js/main.js',

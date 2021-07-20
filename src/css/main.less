@@ -49,3 +49,20 @@ div.square {
     right   : -25%;
     top     : 25%;
 }
+
+.vertical-line {
+    position        : absolute;
+    height          : 100%;
+    width           : 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    top             : 0;
+    left            : 50%;
+
+    &.main-line~.vertical-line {
+        left: 22%;
+    }
+
+    &.main-line+.vertical-line {
+        left: 78%;
+    }
+}
