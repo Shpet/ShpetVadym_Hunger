@@ -89,49 +89,277 @@
     </header>
     <section class="booking">
         <div class="booking__main-content">
-            <div class="booking__form-wrap">
-                <h2>book a table</h2>
-                <span class="divider"></span>
-                <form name="book-a-table" method="POST">
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email">
-                    <input type="tel" placeholder="Phone">
-                    <select name="People" id="People">
-                        <option disabled selected hidden>People</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <!-- Не стал делать запрет на символы и подставку слеша через js, но решил указать, что такая возможность есть -->
-                    <input type="text" pattern="(0[1-9]|1[012])/(0[1-9]|1[0-9]|2[0-9]|3[01]) "
-                        placeholder="Date (mm/dd)">
-                    <!-- Хотел использовать type="time", но он плохо поддерживается браузерами. 
-                        Не уверен, что корректно выбрал способ, слишком уж много копирования кода 
-                        Как вариант можно было сделать Div и из него сотворить select, но я не знаю как сильно пострадает семантика-->
-                    <select name="time" id="time">
-                        <option disabled selected hidden>Time</option>
-                        <option value="14">14:00</option>
-                        <option value="15">15:00</option>
-                        <option value="16">16:00</option>
-                        <option value="17">17:00</option>
-                        <option value="18">18:00</option>
-                        <option value="19">19:00</option>
-                        <option value="20">20:00</option>
-                        <option value="21">21:00</option>
-                    </select>
-                    <input type="submit" value="BOOK NOW">
-                </form>
+            <div>
+                <div class="booking__form-wrap">
+                    <h2>book a table</h2>
+                    <span class="divider"></span>
+                    <form name="book-a-table" method="POST">
+                        <input type="text" placeholder="Name" />
+                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="Phone">
+                        <select name="People" id="People">
+                            <option disabled selected hidden>People</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <!-- Не стал делать запрет на символы и подставку слеша через js, но решил указать, что такая возможность есть -->
+                        <input type="text" pattern="(0[1-9]|1[012])/(0[1-9]|1[0-9]|2[0-9]|3[01]) "
+                            placeholder="Date (mm/dd)">
+                        <!-- Хотел использовать type="time", но он плохо поддерживается браузерами. 
+                        Не уверен, что корректно выбрал способ для выпадающего списка. 
+                        Как вариант можно было сделать Div и из него сотворить список + кастомизировать лучше было бы, 
+                        но т.к. не уверен нужно ли это, то не хочу останавливаться и отвелкаться на это-->
+                        <select name="time" id="time">
+                            <option disabled selected hidden>Time</option>
+                            <option value="14">14:00</option>
+                            <option value="15">15:00</option>
+                            <option value="16">16:00</option>
+                            <option value="17">17:00</option>
+                            <option value="18">18:00</option>
+                            <option value="19">19:00</option>
+                            <option value="20">20:00</option>
+                            <option value="21">21:00</option>
+                        </select>
+                        <input type="submit" class="solid-butt" value="BOOK NOW">
+                    </form>
+                </div>
             </div>
-            <div class="booking_img-wrap">
-                <img src="/src/img/form.jpg" alt="chronometrus">
-                <div class="square"></div>
+            <div>
+                <div class="booking__img-wrap">
+                    <img src="/src/img/form.jpg" alt="chronometrus">
+                    <div class="square"></div>
+                </div>
             </div>
         </div>
         <div class="booking__text-info">
             <p>Mon - Fri: <b>8PM - 10PM</b>, Sat - Sun: <b>8PM - 3AM</b>, Phone: <b>+40 729 131 637/+40 726 458 782</b>
             </p>
+        </div>
+    </section>
+    <section class="specialities">
+        <h3>specialities</h3>
+        <div class="specialities__line"></div>
+        <div class="specialities__line"></div>
+        <div class="specialities__line"></div>
+        <div class="slider">
+            <div class="slider__content">
+                <div class="slider__item">
+                    <div class="slider__img">
+                        <div class="square"></div>
+                        <img src="/src/img/specialities.jpg" alt="chocolate pancakes">
+                    </div>
+                    <div class="slider__text">
+                        <h2>chocolate pancakes</h2>
+                        <span class="divider"></span>
+                        <div class="slider__main-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est
+                            a,
+                            tempor magna.
+                        </div>
+                        <div class="slider__sub-text">
+                            Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices
+                            ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin
+                            lorem
+                            quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper
+                            laoreet.
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__img">
+                        <div class="square"></div>
+                        <img src="/src/img/specialities.jpg" alt="chocolate pancakes">
+                    </div>
+                    <div>
+                        <h2>chocolate pancakes</h2>
+                        <div class="slider__main-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est
+                            a,
+                            tempor magna.
+                        </div>
+                        <div class="slider__sub-text">
+                            Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices
+                            ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin
+                            lorem
+                            quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper
+                            laoreet.
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__img">
+                        <div class="square"></div>
+                        <img src="/src/img/specialities.jpg" alt="chocolate pancakes">
+                    </div>
+                    <div>
+                        <h2>chocolate pancakes</h2>
+                        <div class="slider__main-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est
+                            a,
+                            tempor magna.
+                        </div>
+                        <div class="slider__sub-text">
+                            Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices
+                            ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin
+                            lorem
+                            quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper
+                            laoreet.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__tabs">
+                <span></span>
+                <span class="active-tab"></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+    <section class="menu">
+        <h2>delicious menu</h2>
+        <span class="divider"></span>
+        <p class="menu__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus,
+            molestie est a, tempor magna.</p>
+        <div class="menu__tabs">
+            <div class="menu__tab">soupe</div>
+            <div class="menu__tab">pizza</div>
+            <div class="menu__tab">pasta</div>
+            <div class="menu__tab">desert</div>
+            <div class="menu__tab">wine</div>
+            <div class="menu__tab">beer</div>
+            <div class="menu__tab">drinks</div>
+        </div>
+        <!-- Возможно лучше было бы создавать это в цикле через js? Не уверен. -->
+        <div class="menu__dishes">
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
+            <a href="#" class="dish">
+                <div>
+                    <p class="main-text">PIZZA QUATRO STAGIONI . . . . 55,68 USD</p>
+                    <p class="sub-text">Integer ullamcorper neque eu purus euismod</p>
+                </div>
+            </a>
         </div>
     </section>
 </body>
