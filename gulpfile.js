@@ -13,7 +13,6 @@ const styleFiles = [
     './src/css/fontawesome.min.css',
     './src/css/fonts.less',
     './src/css/main.less',
-    './src/css/sticky_header.less',
     './src/css/header.less',
     './src/css/booking.less',
     './src/css/specialities.less',
