@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="build/css/style.css">
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
     <script src="build/js/script.js" defer></script>
 </head>
 
@@ -145,6 +150,7 @@
         <div class="vertical-line main-line"></div>
         <div class="vertical-line"></div>
         <div class="vertical-line"></div>
+        <!-- Не успевал сделать, поэтому реализовал slick slider -->
         <div class="slider">
             <div class="slider__content">
                 <div class="slider__item">
@@ -174,8 +180,9 @@
                         <div class="square"></div>
                         <img src="/src/img/specialities.jpg" alt="chocolate pancakes">
                     </div>
-                    <div>
+                    <div class="slider__text">
                         <h2>chocolate pancakes</h2>
+                        <span class="divider"></span>
                         <div class="slider__main-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est
                             a,
@@ -195,8 +202,9 @@
                         <div class="square"></div>
                         <img src="/src/img/specialities.jpg" alt="chocolate pancakes">
                     </div>
-                    <div>
+                    <div class="slider__text">
                         <h2>chocolate pancakes</h2>
+                        <span class="divider"></span>
                         <div class="slider__main-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est
                             a,
@@ -211,11 +219,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="slider__tabs">
-                <span></span>
-                <span class="active-tab"></span>
-                <span></span>
             </div>
         </div>
     </section>

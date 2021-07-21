@@ -12,8 +12,9 @@
         margin    : 0 auto;
 
         &__content {
-            display  : flex;
-            flex-wrap: nowrap;
+            display   : flex;
+            flex-wrap : nowrap;
+            transition: all ease 1s;
         }
 
         &__item {
@@ -69,26 +70,6 @@
             font-size  : 14px;
             line-height: 22px;
             margin-top : 20px;
-        }
-
-        &__tabs {
-            display        : flex;
-            justify-content: center;
-
-            span {
-                display         : block;
-                width           : 10px;
-                height          : 10px;
-                border-radius   : 50%;
-                background-color: rgba(255, 255, 255, 0.5);
-                margin          : 0 10px;
-                cursor          : pointer;
-            }
-
-            span.active-tab {
-                background-color: #fff;
-                cursor          : default;
-            }
         }
     }
 }
