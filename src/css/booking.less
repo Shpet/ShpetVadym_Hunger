@@ -1,10 +1,10 @@
-@inp_bg_color : #E5E5E5;
-@primary_color: #E8C300;
+@import './main.less';
 
 .booking {
     &__main-content {
         display        : flex;
         justify-content: center;
+        flex-wrap      : wrap;
 
         &>div {
             flex       : 0 0 50%;
@@ -107,5 +107,84 @@
         font-family: "Open Sans", sans-serif;
         color      : rgba(51, 51, 51, .5);
         margin     : 40px 0;
+    }
+
+    @media @screen_1300 {
+        .booking__main-content {
+            margin: 0 30px;
+        }
+
+        .booking__main-content .booking__form-wrap form {
+            max-width: 100%;
+        }
+
+        .booking__main-content .booking__form-wrap form>* {
+            flex     : 0 0 240px;
+            max-width: 240px;
+        }
+
+        .booking__main-content .booking__img-wrap img {
+            width: 400px;
+        }
+
+        .booking__main-content .booking__img-wrap .square {
+            border-width: 15px;
+        }
+    }
+
+    @media @screen_1024 {
+        .booking__main-content>div {
+            flex           : 0 0 90%;
+            max-width      : 90%;
+            justify-content: center;
+        }
+
+        .booking__main-content .booking__form-wrap {
+            margin-left: 0;
+        }
+    }
+
+    @media @screen_768 {
+        .booking__main-content .booking__form-wrap form>* {
+            height   : 50px;
+            max-width: 200px;
+            flex     : 0 0 200px;
+        }
+
+        .booking__main-content .booking__form-wrap form {
+            justify-content: space-evenly;
+        }
+    }
+
+    @media @screen_540 {
+        .booking__main-content>div {
+            flex     : 0 0 100%;
+            max-width: 100%;
+        }
+
+        .booking__main-content .booking__form-wrap form>* {
+            flex     : 0 0 240px;
+            max-width: 240px;
+        }
+
+        .booking__main-content .booking__form-wrap form input[type=submit] {
+            flex     : 0 0 240px;
+            max-width: 240px;
+        }
+
+        .booking__main-content .booking__img-wrap img {
+            width: 250px;
+        }
+
+        .booking__main-content .booking__img-wrap .square {
+            width       : 120px;
+            height      : 120px;
+            border-width: 10px;
+        }
+
+        .booking__text-info b,
+        .booking__text-info p {
+            margin: 30px 10px;
+        }
     }
 }
