@@ -54,13 +54,13 @@
                     appearance         : none;
                     cursor             : pointer;
                     position           : relative;
-                    background-image   : url('/ShpetVadym_Hunger/src/img/arrow-down.png');
+                    background-image   : url('/src/img/arrow-down.png');
                     background-size    : 16px;
                     background-repeat  : no-repeat;
                     background-position: 90% 50%;
 
                     &.active {
-                        background-image: url('/ShpetVadym_Hunger/src/img/arrow-up.png');
+                        background-image: url('/src/img/arrow-up.png');
                     }
 
                     * {
@@ -132,10 +132,17 @@
     }
 
     @media @screen_1024 {
+        .booking__main-content {
+            flex-wrap: wrap;
+        }
+
+        .booking__main-content .booking__form-wrap {
+            max-width: 450px;
+        }
+
         .booking__main-content>div {
             flex           : 0 0 90%;
             max-width      : 90%;
-            flex-wrap      : wrap;
             justify-content: center;
         }
 
@@ -147,12 +154,8 @@
     @media @screen_768 {
         .booking__main-content .booking__form-wrap form>* {
             height   : 50px;
-            max-width: 200px;
-            flex     : 0 0 200px;
-        }
-
-        .booking__main-content .booking__form-wrap form {
-            justify-content: space-evenly;
+            max-width: 49%;
+            flex     : 0 0 49%;
         }
     }
 
@@ -160,6 +163,7 @@
         .booking__main-content>div {
             flex     : 0 0 100%;
             max-width: 100%;
+            margin   : 30px 15px 0;
         }
 
         .booking__main-content .booking__form-wrap form>* {
@@ -185,6 +189,10 @@
         .booking__text-info b,
         .booking__text-info p {
             margin: 30px 10px;
+        }
+
+        .booking__main-content .booking__form-wrap form {
+            justify-content: center;
         }
     }
 }

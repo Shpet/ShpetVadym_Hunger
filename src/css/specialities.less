@@ -1,5 +1,7 @@
+@import './main.less';
+
 .specialities {
-    background-image   : url('/ShpetVadym_Hunger/src/img/specialties-bg.jpg');
+    background-image   : url('/src/img/specialties-bg.jpg');
     background-position: center;
     background-repeat  : no-repeat;
     background-size    : cover;
@@ -71,5 +73,62 @@
             line-height: 22px;
             margin-top : 20px;
         }
+    }
+
+    @media @screen_1024 {
+        & .slider__img {
+            align-items: center;
+
+            img {
+                width : 300px;
+                height: 300px;
+            }
+
+            .square {
+                left        : calc(50% - 160px);
+                top         : calc(50% - 75px);
+                width       : 150px;
+                height      : 150px;
+                border-width: 15px;
+            }
+        }
+    }
+
+    @media @screen_768 {
+        & .slider__item {
+            flex-direction: column-reverse;
+
+            >* {
+                margin: 10px 0;
+            }
+
+            .slider__img {
+                justify-content: center;
+
+                .square {
+                    left: calc(50% - 250px);
+                    top : calc(50% - 75px);
+                }
+            }
+        }
+    }
+
+    @media @screen_540 {
+        & .slider__item .slider__img {
+            .square {
+                width       : 80px;
+                height      : 80px;
+                border-width: 10px;
+                left        : calc(50% - 160px);
+                top         : calc(50% - 40px);
+            }
+
+            img {
+                width : 250px;
+                height: 250px;
+                margin: 0;
+            }
+        }
+
     }
 }
