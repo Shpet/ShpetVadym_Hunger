@@ -1,5 +1,4 @@
-@width-rect : 444px;
-@height-rect: 74px;
+@import './main.less';
 
 .events {
     display            : flex;
@@ -10,6 +9,7 @@
     background-size    : cover;
     padding            : 45px 75px;
     position           : relative;
+    overflow-x         : hidden;
 
     &__content {
         display        : flex;
@@ -32,7 +32,7 @@
             }
 
             .rect {
-                width           : @width-rect;
+                width           : 101%;
                 height          : @height-rect;
                 background-color: #000;
                 position        : absolute;
@@ -42,6 +42,7 @@
                 padding-left    : 20px;
                 font-size       : 22px;
                 text-transform  : uppercase;
+
             }
         }
     }
@@ -52,16 +53,16 @@
         }
 
         .rect {
-            right    : calc(0% - (@width-rect / 2) + (@height-rect / 2) - 1px);
-            top      : calc(50% - (@height-rect / 2) - 2px);
+            right    : calc(0% - (@width-rect / 2 + 10px) + (@height-rect / 2));
+            top      : calc(50% - (@height-rect / 2) - 1px);
             transform: rotate(90deg);
         }
     }
 
     &__corporative {
         .rect {
-            left     : calc(0% - (@width-rect / 2) + (@height-rect / 2) - 1px);
-            bottom   : calc(50% - (@height-rect / 2) + 2px);
+            left     : calc(0% - (@width-rect / 2 + 10px) + (@height-rect / 2));
+            bottom   : calc(50% - (@height-rect / 2));
             transform: rotate(-90deg);
         }
     }
@@ -76,6 +77,51 @@
         >span {
             font-family: "Open Sans Bold", sans-serif;
             font-weight: 700;
+        }
+    }
+
+    @media @screen_1024 {
+        @width-rect: 300px;
+
+        & {
+            padding: 45px 20px;
+        }
+
+        &__content {
+            justify-content: space-between;
+        }
+
+        &__content>div {
+            max-width: @width-rect;
+            margin   : 20px;
+        }
+
+        .events__content>div .square {
+            width       : 150px;
+            height      : 150px;
+            border-width: 10px;
+        }
+
+        .events__weedings .rect {
+            right: calc(0% - ((@width-rect + 10px) / 2) + (74px / 2));
+        }
+
+        .events__corporative .rect {
+            left: calc(0% - ((@width-rect + 10px) / 2) + (74px / 2));
+        }
+    }
+
+    @media @screen_540 {
+        @width-rect : 240px;
+
+        &__content {
+            flex-direction: column;
+            align-items   : center;
+
+            >div .rect {
+                font-size: 16px;
+                height   : @height-rect;
+            }
         }
     }
 }
