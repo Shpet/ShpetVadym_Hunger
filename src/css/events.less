@@ -32,16 +32,17 @@
             }
 
             .rect {
-                width           : 101%;
-                height          : @height-rect;
+                width           : @height-rect;
+                height          : @width-rect;
                 background-color: #000;
                 position        : absolute;
                 color           : #fff;
                 display         : flex;
+                justify-content : center;
                 align-items     : center;
-                padding-left    : 20px;
                 font-size       : 22px;
                 text-transform  : uppercase;
+                top             : 0;
 
             }
         }
@@ -53,17 +54,26 @@
         }
 
         .rect {
-            right    : calc(0% - (@width-rect / 2 + 10px) + (@height-rect / 2));
-            top      : calc(50% - (@height-rect / 2) - 1px);
-            transform: rotate(90deg);
+            right: 0;
+
+            p {
+                align-self: flex-start;
+                margin-top: 100%;
+                transform : rotate(90deg);
+            }
         }
     }
 
     &__corporative {
         .rect {
-            left     : calc(0% - (@width-rect / 2 + 10px) + (@height-rect / 2));
-            bottom   : calc(50% - (@height-rect / 2));
-            transform: rotate(-90deg);
+            left: 0;
+
+            p {
+                min-width    : max-content;
+                transform    : rotate(-90deg);
+                align-self   : flex-end;
+                margin-bottom: 175%;
+            }
         }
     }
 
@@ -87,10 +97,6 @@
             padding: 45px 20px;
         }
 
-        &__content {
-            justify-content: space-between;
-        }
-
         &__content>div {
             max-width: @width-rect;
             margin   : 20px;
@@ -103,11 +109,18 @@
         }
 
         .events__weedings .rect {
-            right: calc(0% - ((@width-rect + 10px) / 2) + (74px / 2));
+            // right: calc(0% - ((@width-rect + 10px) / 2) + (74px / 2));
         }
 
         .events__corporative .rect {
-            left: calc(0% - ((@width-rect + 10px) / 2) + (74px / 2));
+            // left: calc(0% - ((@width-rect + 10px) / 2) + (74px / 2));
+        }
+    }
+
+    @media @screen_768 {
+        >div .rect {
+            font-size: 16px;
+            width    : 60px;
         }
     }
 
@@ -117,11 +130,6 @@
         &__content {
             flex-direction: column;
             align-items   : center;
-
-            >div .rect {
-                font-size: 16px;
-                height   : @height-rect;
-            }
         }
     }
 }
